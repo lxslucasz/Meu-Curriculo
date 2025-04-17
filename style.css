@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ p {
+    text-align: justify;
+ }
+ .contato {
+    display: flex;              /* Flexbox para centralizar */
+    flex-direction: column;     /* Coloca os itens em coluna */
+    align-items: center;        /* Alinha no centro horizontalmente */
+    color: #ffffff;             /* Letras brancas */
+    margin-top: 15px;           /* Espaço entre a imagem e os dados */
+    margin-bottom: 40px;        /* Espaço entre os dados e o próximo conteúdo */
+    font-size: 1rem;            /* Tamanho de fonte padrão */
+    line-height: 1.3;           /* Linhas próximas, mas ainda legíveis */
+    text-align: center;         /* Garante centralização de texto */
+  }
+  
+  /* Estilo geral do body */
+  body {
+    background-color: #5e2129; /* Cor de fundo vinho escuro */
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Container principal com padding central */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+  }
+
+  .profile-image {
+    display: flex;              /* Ativa o flexbox */
+    justify-content: center;    /* Centraliza horizontalmente */
+    margin-bottom: 40px;        /* Espaço entre imagem e texto abaixo */
+  }
+  
+  .profile-image img {
+    width: 280px;               /* Tamanho maior da imagem */
+    height: 280px;
+    border-radius: 50%;         /* Deixa redonda */
+    object-fit: cover;          /* Mantém o rosto centralizado sem deformar */
+    border: 5px solid #fff;     /* Borda branca de destaque */
+    transition: transform 0.4s ease;
+  }
+  
+  .profile-image img:hover {
+    transform: scale(1.08);     /* Efeito de zoom suave ao passar o mouse */
+  }
+  
+  /* Estilo das seções de conteúdo */
+  .card {
+    background-color: #7a2e3a; /* Subtom mais claro do vinho */
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Efeito de destaque ao passar o mouse */
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animação de fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.6s; }
+  .delay-3 { animation-delay: 0.9s; }
+  .delay-4 { animation-delay: 1.2s; }
+  .delay-5 { animation-delay: 1.5s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Rodapé com redes sociais */
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  footer h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo dos links sociais */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background-color: #7a2e3a;
+    transition: all 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background-color: #a43b4b;
+    transform: translateY(-5px);
+  }
+
+  .curriculo-chamada {
+    background-color: #3b151b;      /* Vinho mais escuro */
+    color: white;                   /* Texto branco */
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);  /* Leve sombra */
+    transition: transform 0.3s ease;
+  }
+  
+  .curriculo-chamada:hover {
+    transform: scale(1.02);         /* Levanta levemente no hover */
+  }
+  
+  .curriculo-chamada p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .curriculo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5e2129;     /* Mesma cor vinho principal */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .curriculo-btn:hover {
+    background-color: #822b38;     /* Tom um pouco mais claro no hover */
+    transform: scale(1.05);        /* Botão cresce levemente */
+  }

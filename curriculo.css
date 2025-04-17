@@ -1,0 +1,60 @@
+/* Estilos para a página de currículo (página 2) */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #5e2129; /* Fundo vinho escuro */
+    color: white; /* Letras brancas */
+    background-image: url('tech-pattern-white.svg'); /* Símbolos tecnológicos brancos */
+    background-size: contain;
+    background-repeat: repeat;
+  }
+  
+  .curriculo-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente dentro da área do currículo */
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .bloco {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid white;
+    background-color: rgba(255, 255, 255, 0.03); /* Subtom das caixas de conteúdo */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .bloco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .curriculo-container {
+      padding: 20px 10px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

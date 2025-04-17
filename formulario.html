@@ -1,0 +1,69 @@
+<script>
+    document.getElementById('formContato').addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const email = document.getElementById('email').value;
+  
+      // Enviando os dados para o servidor (backend)
+      fetch('https://seu-servidor.com/api/contato', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ nome, telefone, email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Formulário enviado com sucesso!');
+      })
+      .catch(error => {
+        console.error('Erro ao enviar dados:', error);
+        alert('Ocorreu um erro. Tente novamente.');
+      });
+    });
+  </script>
+  Neste caso, os dados seriam enviados para uma API do backend em https://seu-servidor.com/api/contato, onde você teria um endpoint preparado para processá-los. A resposta de sucesso ou erro seria tratada no front-end.
+  
+  2. Enviar os Dados para o seu E-mail (sem backend)
+  Se você não deseja criar um servidor, pode usar serviços como Formspree, EmailJS, ou Google Forms para enviar os dados do formulário diretamente para o seu e-mail. Eles oferecem uma maneira simples de configurar formulários sem precisar escrever backend.
+  
+  Exemplo com EmailJS:
+  Crie uma conta no EmailJS.
+  
+  Crie um template de e-mail que será usado para enviar os dados.
+  
+  No formulário, configure o envio para o seu e-mail com JavaScript.
+  
+  Aqui está como seria:
+  
+  html
+  Copiar
+  Editar
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  
+  <script>
+    emailjs.init('user_yourEmailJSKey'); // Substitua com sua chave do EmailJS
+  
+    document.getElementById('formContato').addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const email = document.getElementById('email').value;
+  
+      const templateParams = {
+        nome: nome,
+        telefone: telefone,
+        email: email
+      };
+  
+      emailjs.send('service_yourServiceID', 'template_yourTemplateID', templateParams)
+        .then(function(response) {
+          alert('Formulário enviado com sucesso!');
+        }, function(error) {
+          alert('Ocorreu um erro ao enviar os dados. Tente novamente.');
+        });
+    });
+  </script>

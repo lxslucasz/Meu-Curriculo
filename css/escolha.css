@@ -1,0 +1,57 @@
+/* === Fundo vinho escuro === */
+body {
+    background-color: #5e2129;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container centralizado */
+  .container {
+    text-align: center;
+  }
+  
+  /* Estilo da foto quadrada */
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Mantém o corte centralizado */
+    border-radius: 10px; /* Cantos levemente arredondados */
+    margin-bottom: 25px;
+    border: 3px solid white;
+  }
+  
+  /* Estilo do título */
+  h1 {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+  }
+  
+  /* Botões de escolha */
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Estilo dos botões */
+  .botao {
+    background-color: #7a2e39; /* Tom mais claro de vinho */
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Animação ao passar o mouse */
+  .botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
